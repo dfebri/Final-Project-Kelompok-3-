@@ -1,4 +1,0 @@
-Pembagian tugas kelompok : 
-Test case
-manual test
-automation test
