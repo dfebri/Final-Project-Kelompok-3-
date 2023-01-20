@@ -1,0 +1,39 @@
+import unittest
+import time
+from selenium import webdriver 
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
+
+class TestLoginRegister(unittest.TestCase): 
+
+    def setUp(self): 
+        self.driver = webdriver.Chrome(ChromeDriverManager().install())
+
+    def test_Login_Positif(self): 
+        driver = self.driver
+        driver.get("https://itera-qa.azurewebsites.net") # buka situs
+        driver.maximize_window()
+        time.sleep(3)
+        driver.find_element(By.LINK_TEXT, value= "Login").click()
+        time.sleep(1)
+        driver.find_element(By.ID, "Username").send_keys("dfebri")
+        time.sleep(1)
+        driver.find_element(By.ID, "Password").send_keys("Azura#01")
+        time.sleep(1)
+        driver.find_element(By.NAME, value= "login").click()
+        time.sleep(5)
+        driver.find_element(By.CSS_SELECTOR, ".btn-primary").click()
+        driver.find_element(By.ID, "Name").send_keys("Alphabet")
+        driver.find_element(By.ID, "Company").send_keys("Order")
+        driver.find_element(By.ID, "Address").send_keys("Jl Cisangkuy 23")
+        driver.find_element(By.ID, "City").send_keys("Bandung")
+        driver.find_element(By.ID, "Phone").send_keys("(+62)888999888")
+        driver.find_element(By.ID, "Email").send_keys("alphabetorder@gmail.com")
+        time.sleep(3)
+        driver.find_element(By.CSS_SELECTOR, ".btn-primary").click()
+        time.sleep(5)
+
+unittest.main()
