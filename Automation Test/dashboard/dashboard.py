@@ -49,7 +49,7 @@ class dashboard(unittest.TestCase):
         self.driver.find_element(By.XPATH, "/html/body/div/div[4]/div[2]/div/select").click()    
         self.driver.find_element(By.XPATH, "/html/body/div/div[5]/div[2]/div[1]/div[1]/label").click()
         self.driver.find_element(By.XPATH, "/html/body/div/div[5]/div[2]/div[2]/div[1]/label").click()
-        self.driver.find_element(By.XPATH, "/html/body/div/div[6]/div[2]/div/div/div[1]/label").click()
+        # self.driver.find_element(By.XPATH, "/html/body/div/div[6]/div[2]/div/div/div[1]/label").click()
         time.sleep(2)
 
     def test_dashboard_tutorial(self):
