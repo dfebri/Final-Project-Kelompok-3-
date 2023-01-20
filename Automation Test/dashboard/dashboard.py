@@ -5,11 +5,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 import unittest
 import time
 
-class dashboard(unittest.TestCase):
-
-    # def set_dashboard(self):
-    #     self.driver = webdriver.Chrome(ChromeDriverManager().install())
-        
+class dashboard(unittest.TestCase): 
+    
     def test_dashboard_home(self):
         driver = webdriver.Chrome(ChromeDriverManager().install())
         driver.get("https://itera-qa.azurewebsites.net")
