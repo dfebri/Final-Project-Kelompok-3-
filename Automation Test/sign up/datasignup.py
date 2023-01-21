@@ -16,7 +16,7 @@ def Positive(driver):
     driver.find_element(By.ID,'Surname').send_keys('1')
     driver.find_element(By.ID,'E_post').send_keys('1')
     driver.find_element(By.ID,'Mobile').send_keys('1')
-    driver.find_element(By.ID,'Username').send_keys('draco')
+    driver.find_element(By.ID,'Username').send_keys('ma')
     driver.find_element(By.ID,'Password').send_keys('1')
     driver.find_element(By.ID,'ConfirmPassword').send_keys('1')
 
@@ -41,7 +41,6 @@ def Negative2(driver): #Not input surname
     driver.find_element(By.LINK_TEXT,"Sign Up").click()
     time.sleep(3)
     driver.find_element(By.ID,'FirstName').send_keys('1')
-    driver.find_element(By.ID,'Surname').send_keys('1')
     driver.find_element(By.ID,'E_post').send_keys('1')
     driver.find_element(By.ID,'Mobile').send_keys('1')
     driver.find_element(By.ID,'Password').send_keys('1')
