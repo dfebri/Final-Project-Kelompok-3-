@@ -7,7 +7,7 @@ import time
 
 class dashboard(unittest.TestCase): 
     
-    def test_dashboard_home(self):
+    def test_dashboard_home(driver):
         driver = webdriver.Chrome(ChromeDriverManager().install())
         driver.get("https://itera-qa.azurewebsites.net")
         driver.maximize_window()
@@ -15,7 +15,7 @@ class dashboard(unittest.TestCase):
         driver.find_element(By.CSS_SELECTOR, "body > div > div.jumbotron > p:nth-child(4) > a").click()          
         time.sleep(2)
 
-    def test_dashboard_practice(self):
+    def test_dashboard_practice(driver):
         driver = webdriver.Chrome(ChromeDriverManager().install())
         driver.get("https://itera-qa.azurewebsites.net")
         driver.maximize_window()
@@ -26,7 +26,7 @@ class dashboard(unittest.TestCase):
         driver.find_element(By.XPATH, "/html/body/div/div[4]/p/button").click()      
         time.sleep(2)
 
-    def test_dashboard_testautomation(self):
+    def test_dashboard_testautomation(driver):
         driver = webdriver.Chrome(ChromeDriverManager().install())
         driver.get("https://itera-qa.azurewebsites.net")
         driver.maximize_window()
@@ -46,7 +46,7 @@ class dashboard(unittest.TestCase):
         # driver.find_element(By.XPATH, "/html/body/div/div[6]/div[2]/div/div/div[1]/label").click()
         time.sleep(2)
 
-    def test_dashboard_tutorial(self):
+    def test_dashboard_tutorial(driver):
         driver = webdriver.Chrome(ChromeDriverManager().install())
         driver.get("https://itera-qa.azurewebsites.net")
         driver.maximize_window()
